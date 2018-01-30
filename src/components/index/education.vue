@@ -20,18 +20,28 @@
           <h1 class="school-name">Self taught</h1>
           <span class="school-time">2013 - infinity</span>
           <p class="school-details">
-            I must admit that nearly 80% of my programming knowledge is 
-            coming from the internet. I started to study computer programming 
-            and web security when I was in grade 7 (2013). There some few 
-            troubles at first but I still able to overcome them all.
+            The good thing when being a self-taught developer is that it help 
+            enhance your self-learning skill. I must admit that nearly 80% of 
+            my programming knowledge is coming from the Internet. 
+            I started to study computer programming and web security when I 
+            was in grade 7 (2013). There some few troubles at first but I still 
+            able to overcome them all.
             <br>
             I've written an article 
             <a href="https://medium.com/the-z/how-i-taught-myself-programming-c690a85700ac">
               describing my process of learning programming.
-            </a> 
+            </a>
+            <br>
+            <br>
+            In addition, by using my self-learning skill, I was able to teach myself
+            English. I have been watching English-speaking TV programs since I was 8
+            and 6 years later, I got into English specialized class without studying
+            in any English center or classes, my main study resource is always the
+            Internet.
           </p>
           <h2 class="school-achivement">My achievement</h2>
           <ul class="achivements">
+            <li>I got into English specialized class in grade 9</li>
             <li>I'm youngest moderator of the Vietnam cyber security forum (ceh.vn)</li>
             <li>Being offered to teach web development at howkteam.vn</li>
             <li>I'm the ex-moderator of security365.vn</li>

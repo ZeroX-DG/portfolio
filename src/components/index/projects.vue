@@ -56,7 +56,7 @@ export default {
 <style lang="scss">
 .projects {
   margin-top: 300px; // skew-background on education block
-  background: #242424;
+  background: #ffffff;
   &__title-block {
     width: 100%;
     height: 200px;
@@ -65,7 +65,7 @@ export default {
     background-attachment: fixed;
     background-size: 100% 150%;
     font-size: 5rem;
-    font-family: 'Lora', sans-serif;
+    font-family: "Poppins", sans-serif;
     .mask {
       width: 100%;
       height: 200px;
@@ -109,6 +109,7 @@ export default {
         margin: 100px;
         overflow: hidden;
         position: relative;
+        box-shadow: 0px 2px 33px 3px rgba(0,0,0,0.24);
         img{
           width: 100%;
           transition: transform 0.5s;

@@ -21,9 +21,9 @@
       <br>
       After grade 9, I dropped out of high school to apply and study software
       engineering at Aptech. Although I was only 15 years old and most of the
-      students there are from 18 to 25 years old, I'm still able to become the
+      students there are from 18 to 25 years old, I was still able to become the
       best student in class thanks to the knowledge that I absorbed from the
-      internet.
+      Internet.
       <br>
       <br>
       Now I'm currently studying higher diploma in software engineering

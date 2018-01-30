@@ -1,18 +1,29 @@
 <template>
   <div class="overlay-menu">
-    <div class="menu__item" @click="goToSection('about')">
+    <canvas id="particles" class="hidden"></canvas>
+    <div class="menu__item"
+          id='about'
+          @click="goToSection('about')">
       <span class="text">About</span>
     </div>
-    <div class="menu__item" @click="goToSection('education')">
+    <div class="menu__item" 
+          id='education'
+          @click="goToSection('education')">
       <span class="text">Education</span>
     </div>
-    <div class="menu__item" @click="goToSection('projects')">
+    <div class="menu__item" 
+          id='projects'
+          @click="goToSection('projects')">
       <span class="text">Projects</span>
     </div>
-    <div class="menu__item" @click="goToSection('events')">
-      <span class="text">Events</span>
+    <div class="menu__item" 
+          id='writing'
+          @click="goToSection('writing')">
+      <span class="text">Articles</span>
     </div>
-    <div class="menu__item" @click="goToSection('contact')">
+    <div class="menu__item" 
+          id='contact'
+          @click="goToSection('contact')">
       <span class="text">Contact</span>
     </div>
   </div>
@@ -20,6 +31,7 @@
 
 <script>
 import $ from 'jquery';
+import Particle from '@/particles.js'
 export default {
   name: "overlayMenu",
   data() {
@@ -27,7 +39,26 @@ export default {
       isMenuOpen: false
     }
   },
+  mounted() {
+    // init hover
+    $('.menu__item').hover((e) => {
+      this.openCanvas(e.target.id);
+    }, () => {
+      this.closeCanvas();
+    });
+    //this.initCanvas();
+  },
   methods: {
+    initCanvas(){
+      // init canvas
+      let ctx = document.getElementById('particles').getContext("2d");
+      let maxAmount = 10;
+      let particles = [];
+      for (let i = 0; i < maxAmount; i++) {
+        let particle = new Particle(ctx);
+        particle.show();
+      }
+    },
     goToSection(name) {
       $('html,body').animate({
         scrollTop: $("."+name).offset().top
@@ -97,6 +128,19 @@ export default {
       this.isMenuOpen = true;
       $(".overlay-menu").css("display", "flex");
       this.openMenuItem(this.openText);
+    },
+    openCanvas(menu_id) {
+      let x = $("#" + menu_id).offset().left;
+      $("#particles").css("left", x);
+      $("#particles").removeClass("hidden");
+      $("#particles").css('width', $(window).width() / 5 + 'px');
+      $("#particles").css('height', $(window).height() + 'px');
+      $("#particles").prop('width', $(window).width() / 5);
+      $("#particles").prop('height', $(window).height());
+      //this.initCanvas();
+    },
+    closeCanvas() {
+      $("#particles").addClass("hidden");
     }
   }
 }
@@ -111,7 +155,6 @@ export default {
   display: none;
   .menu__item {
     background: black;
-    width: calc(100% / 5);
     height: 100%;
     font-size: 3.5rem;
     color: white;
@@ -126,33 +169,42 @@ export default {
     overflow: hidden;
     opacity: 0;
     .text {
-      transition: all 0.5s;
-      position: relative;
+      transition: all 1s;
       opacity: 0;
       margin-left: 100%;
-      &::before {
-        content: '';
-        width: 1px;
-        height: 20px;
-        background: white;
-        position: absolute;
-        top: -30px;
-        left: 50%;
-        transition: all 0.5s ease;
-      }
+    }
+    &::before {
+      content: '';
+      width: 1px;
+      height: 30px;
+      background: white;
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transition: all 1s ease;
     }
     &:hover{ 
       background: white;
     }
     &:hover .text {
-      margin-top: 100px;
+      margin-top: 200px;
       color: black;
+      transform: rotate(90deg);
     }
-    &:hover .text::before {
+    &:hover::before {
       background: black;
-      height: 100px;
-      top: -130px;
+      height: 250px;
     }
   }
+}
+
+#particles {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.hidden {
+  visibility: hidden;
 }
 </style>
