@@ -95,10 +95,10 @@ export default {
       text-decoration: none;
     }
     .width-2-3 {
-      width: 66.3%;
+      width: 66%;
     }
     .width-1-3 {
-      width: 33.3%;
+      width: 33%;
     }
     .article {
       position: relative;

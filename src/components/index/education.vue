@@ -74,7 +74,7 @@
                 <li>Elementary Programming in C</li>
               </ul>
             </li>
-            <li>I'm the team leader for all 3 school projects</li>
+            <li>I was nominated to be the team leader for all 3 school projects</li>
           </ul>
         </div>
       </div>
