@@ -11,12 +11,17 @@
       </a>
       <a href="https://twitter.com/ZeroX-DG">
         <div class="contact-block">
-          <i class="fa fa-twitter"></i>    
+          <i class="fa fa-twitter"></i>
         </div>
       </a>
       <a href="https://github.com/ZeroX-DG">
         <div class="contact-block">
           <i class="fa fa-github"></i>
+        </div>
+      </a>
+      <a href="https://medium.com/@nguynvithng_34102">
+        <div class="contact-block">
+          <i class="fa fa-medium"></i>
         </div>
       </a>
       <div class="contact-block" @click="openEmail">
@@ -64,11 +69,11 @@ export default {
     }
   }
   .contacts {
-    width: 500px;
+    width: 600px;
     display: flex;
     margin-top: 150px;
     justify-content: space-around;
-    margin-left: calc((100% - 500px) / 2);
+    margin-left: calc((100% - 600px) / 2);
     a {
       text-decoration: none;
       color: inherit;
@@ -96,6 +101,9 @@ export default {
         color: #1da1f2;
       }
       &:hover .fa-github {
+        color: black;
+      }
+      &:hover .fa-medium {
         color: black;
       }
       &:hover .fa-envelope {
