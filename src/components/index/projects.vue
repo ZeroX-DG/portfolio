@@ -21,7 +21,7 @@
           <div class="project__short-description">
             {{ project.description }}
           </div>
-          <span class="project__view-link">View project</span>
+          <a :href="project.link" class="project__view-link">View project</a>
         </div>
       </div>
     </div>
@@ -29,29 +29,41 @@
 </template>
 <script>
 export default {
-  name: 'projects',
+  name: "projects",
   data() {
     return {
       projects: [
         {
-          "image": "noticeZ.png",
-          "title": "NoticeZ",
-          "description": "A simple JS library for creating web push notifications"
+          image: "snippetstore.png",
+          title: "Snippet Store",
+          description: "A snippet management app for developers",
+          link: "https://zerox-dg.github.io/SnippetStoreWeb/"
         },
         {
-          "image": "ispeakalone.png",
-          "title": "I speak alone",
-          "description": "A webapp for people who practising IELTS speaking alone"
+          image: "noticeZ.png",
+          title: "NoticeZ",
+          description:
+            "A simple JS library for creating web push notifications",
+          link: "https://zerox-dg.github.io/NoticeZ/"
         },
         {
-          "image": "elisten.png",
-          "title": "EListen",
-          "description": "A webapp for people who practising listening to English words"
+          image: "ispeakalone.png",
+          title: "I speak alone",
+          description:
+            "A webapp for people who practising IELTS speaking alone",
+          link: "http://ispeakalone.herokuapp.com/"
+        },
+        {
+          image: "elisten.png",
+          title: "EListen",
+          description:
+            "A webapp for people who practising listening to English words",
+          link: "https://zerox-dg.github.io/Elisten/"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 <style lang="scss">
 .projects {
@@ -90,9 +102,9 @@ export default {
       }
     }
     &::after {
-      content:"";
-      clear:both;
-      display:block;
+      content: "";
+      clear: both;
+      display: block;
     }
     .project {
       position: relative;
@@ -109,8 +121,8 @@ export default {
         margin: 100px;
         overflow: hidden;
         position: relative;
-        box-shadow: 0px 2px 33px 3px rgba(0,0,0,0.24);
-        img{
+        box-shadow: 0px 2px 33px 3px rgba(0, 0, 0, 0.24);
+        img {
           width: 100%;
           transition: transform 0.5s;
           display: block;
@@ -122,7 +134,7 @@ export default {
       &__description {
         width: 400px;
         height: 300px;
-        background: #1C1C1C;
+        background: #1c1c1c;
         color: white;
         padding: 45px;
         position: absolute;
@@ -134,7 +146,7 @@ export default {
         font-size: 2.5rem;
         position: relative;
         &::after {
-          content: '';
+          content: "";
           width: 30%;
           height: 2px;
           background: #a06801;
@@ -163,8 +175,10 @@ export default {
         color: #db8f00;
         font-style: italic;
         cursor: pointer;
-        &::after{
-          content: '';
+        user-select: none;
+        text-decoration: none;
+        &::after {
+          content: "";
           width: 0;
           height: 2px;
           background: #db8f00;
@@ -173,7 +187,7 @@ export default {
           left: 0;
           transition: width 0.5s;
         }
-        &:hover::after{
+        &:hover::after {
           width: 105%;
         }
       }
