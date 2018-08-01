@@ -9,7 +9,7 @@
           <i class="fa fa-facebook"></i>
         </div>
       </a>
-      <a href="https://twitter.com/ZeroX-DG">
+      <a href="https://twitter.com/ZeroX_Hung">
         <div class="contact-block">
           <i class="fa fa-twitter"></i>
         </div>
